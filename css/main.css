@@ -1,0 +1,184 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+font-size: 14px;
+font-family:"Raleway";
+}
+
+
+section{
+padding:25px;
+background-color:hsl(229, 57%, 11%) ;
+color:hsl(243, 100%, 93%);
+height: 100vh;
+display: flex;
+align-items:center;
+justify-content: center;
+position:relative;
+}
+section::before {
+content:"";
+background-image:url(../images/bg-desktop.png);
+position:absolute;
+bottom:0;
+width:100%;
+height:50%;
+}
+@media (max-width:375px){
+section::before {
+background-image:url(../images/bg-mobile.png);
+height: 100%;
+}
+}
+section >div{
+width:100%;
+display:flex;
+justify-content: center;
+align-items: center;
+gap:25px;
+
+}
+@media (max-width:767px){
+section >div {
+flex-direction: column;
+}
+}
+
+section .files{
+position: relative;
+background-color: hsl(228, 56%, 26%);
+width: 50px;
+padding: 45px;
+border-radius: 10px 100px 10px 10px;
+display: flex;
+flex-direction: column;
+gap: 25px;
+width: 335px;
+}
+@media (max-width:767px){
+section .files {
+width:100%;
+}
+}
+section .files > img{
+width: 150px;
+}
+section .files .info{
+display: flex;
+gap: 15px;
+}
+section .files .info .image{
+background-color: hsl(229, 57%, 11%);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+section .files .info img{
+width: 50px;
+padding: 14px;
+
+}
+section .hard-disk{
+position:relative;
+padding: 30px 30px 45px;
+background-color:hsl(228, 56%, 26%) ;
+width:600px;
+align-self: flex-end;
+border-radius:10px;
+}
+@media (max-width:767px){
+section .hard-disk{
+width:100%;
+}
+}
+section .hard-disk::before{
+content:"";
+position:absolute;
+top:-15px;
+right:25px;
+border-width:30px;
+border-style:solid;
+border-color:transparent white transparent transparent;
+}
+@media (max-width:767px){
+section .hard-disk::before{
+display:none;
+}
+}
+section  .hard-disk > p:first-child{
+display: flex;
+align-items: center;
+justify-content: center;
+position:absolute;
+top:-40px;
+right:25px;
+background-color: white;
+font-size: 1rem;
+border-radius:10px;
+text-transform: uppercase;
+color:hsl(229, 7%, 55%);
+font-weight: 700;
+width: 175px;
+height:65px;
+}
+@media (max-width:767px){
+section  .hard-disk > p:first-child{
+top:100%;
+left:50%;
+transform:translate(-50%,-50%);
+
+}
+}
+section .hard-disk > p:first-child span{
+font-size: 2.5rem;
+padding-right:10px;
+color:black;
+
+
+}
+section .hard-disk >p:nth-child(2){
+font-size:1rem;
+margin:15px 0;
+}
+section .hard-disk >p:nth-child(2) span{
+font-weight:700;
+}
+section .hard-disk >  div{
+padding:3px;
+width:100%;
+height:20px;
+border-radius:40px;
+background-color: hsl(229, 57%, 11%);
+}
+section .hard-disk > div span{
+position: relative;
+height:100%;
+width:80%;
+display:block;
+background-color: hsl(335, 100%, 65%);
+border-radius:40px;
+}
+section .hard-disk > div span::before{
+content:"";
+width:10px;
+height:70%;
+border-radius:50%;
+background-color:white;
+position:absolute;
+right:2px;
+top:2px;
+}
+section .hard-disk ul{
+list-style: none;
+padding:0;
+display: flex;
+justify-content:space-between;
+width: 100%;
+font-size:1rem;
+margin-top:10px;
+}
